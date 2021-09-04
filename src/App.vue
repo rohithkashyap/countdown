@@ -1,10 +1,12 @@
 <template>
   <div>
-    <h4>Current time: </h4>
-    <h4>{{ timestamp }}</h4>
-    <h4>Target date:</h4>
+    <h3>Current time: </h3>
+    <h2>{{ timestamp }}</h2>
+    <hr>
+    <h3>Target date:</h3>
     <input type="datetime-local" v-model="newTargetDate" />
-    <h4>Time to go: </h4>
+    <hr>
+    <h3>Time to go: </h3>
     <h2> {{ timeDiff }}</h2>
   </div>
 </template>
@@ -94,5 +96,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+input[type="datetime-local"] {
+  transform: scale(1.5);
 }
 </style>
